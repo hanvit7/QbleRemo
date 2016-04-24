@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lake3"
+
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="org.qblex.qbleremo.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        layout="@layout/toolbar"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:layout_below="@+id/toolBar">
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00ffffff" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="469dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/relativeLayout">
+
+                <ScrollView
+                    android:id="@+id/scrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toLeftOf="@+id/imageSwitcher2"
+                    android:layout_toStartOf="@+id/imageSwitcher2">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Result"
+                        android:textColor="#ffffff" />
+                </ScrollView>
+
+                <ImageSwitcher
+                    android:id="@+id/imageSwitcher"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="7dp" />
+
+                <ImageSwitcher
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:id="@+id/imageSwitcher2"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/imageSwitcher"
+                    android:layout_toStartOf="@+id/imageSwitcher"
+                    android:layout_margin="7dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="vertical"
+                    android:weightSum="1"
+                    android:id="@+id/linearLayout"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_below="@+id/scrollView">
+
+                    <Button
+                        android:id="@+id/button1"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/xml_border"
+                        android:text="Window 1" />
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/xml_border"
+                        android:text="Window 2" />
+
+                    <Button
+                        android:id="@+id/button3"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/xml_border"
+                        android:text="Window 3" />
+
+                    <Button
+                        android:id="@+id/button4"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/xml_border"
+                        android:text="Window 4" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </FrameLayout>
+
+        <View
+            android:id="@+id/drawer"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="#44ffffff" />
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+</RelativeLayout>
